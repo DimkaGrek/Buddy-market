@@ -1,0 +1,343 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --dark_violet: #390176;
+    --light_grey: #9e9fa1;
+    --light_grey_bg: #e8e8ea;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+}
+
+/* Reset styles */
+html {
+    scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    /* height: auto; */
+}
+
+/* Common */
+section,
+header {
+    margin-bottom: 12px;
+}
+.container {
+    min-width: 320px;
+    max-width: 360px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: var(--black);
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.33; /* 133.333% */
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+
+    color: #ffa31a;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.logo-img {
+    margin-right: 8px;
+}
+
+.header-icons {
+    margin-left: 8px;
+}
+
+/* Sign in */
+.sign-in {
+    display: flex;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.sing-in-avatar {
+    margin-right: 12px;
+}
+.sing-in-info {
+    margin-right: auto;
+}
+.sing-in-info-title {
+    overflow: hidden;
+    color: var(--black);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+}
+.sing-in-info-text {
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.5);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.33; /* 133.333% */
+}
+.btn-sing-in {
+    width: 73px;
+    height: 40px;
+    padding: 8px;
+
+    border-radius: 8px;
+    border: 1px solid var(--black);
+    background: var(--white);
+
+    color: var(--black);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.38; /* 137.5% */
+}
+
+/* Search */
+.search-input {
+    width: 100%;
+    padding: 4px 4px 4px 12px;
+
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.05);
+}
+.hero-title {
+    width: 298px;
+    margin: 0 auto;
+    color: var(--black);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.38; /* 137.5% */
+}
+
+/* Catalog */
+.catalog-title {
+    margin-bottom: 12px;
+}
+.catalog-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.btn-catalog-category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+
+    padding: 12px;
+    width: 160px;
+
+    background-color: var(--white);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.btn-catalog-title {
+    overflow: hidden;
+    color: var(--black);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14; /* 114.286% */
+}
+.btn-catalog {
+    width: 100%;
+    padding: 10px 12px;
+
+    border-radius: 8px;
+    border: 1px solid #000;
+    background-color: #fff;
+
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.38; /* 137.5% */
+}
+/* For Recommended, Popular, New Product, Brands, Reviews */
+.section-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.btn-view-all {
+    padding: 4px 16px;
+
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #000;
+
+    color: #000;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Card */
+.card {
+    width: 261px;
+
+    border-radius: 8px;
+    border: 1px solid var(--light_grey_bg);
+}
+.card-info {
+    padding: 16px;
+}
+.card-price,
+.card-title,
+.card-text {
+    margin-bottom: 8px;
+}
+.card-price {
+    color: var(--dark_violet);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.card-old-price {
+    color: var(--light_grey);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: strikethrough;
+}
+.card-title {
+    color: #613491;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.14; /* 114.286% */
+}
+.card-text {
+    color: #613491;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.14; /* 114.286% */
+}
+.btn-add-to-cart {
+    width: 100%;
+    padding: 8px 12px;
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #ffa31a;
+
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.16; /* 16.24px */
+}
+
+/* Recommended */
+.recommended {
+    padding-top: 16px;
+}
+.recommended {
+    margin-bottom: 12px;
+}
