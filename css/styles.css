@@ -1,13 +1,14 @@
 :root {
     --white: #fff;
     --black: #000;
+    --violet: #8f21d3;
     --dark_violet: #390176;
     --light_grey: #9e9fa1;
     --light_grey_bg: #e8e8ea;
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
 }
 
@@ -63,6 +64,13 @@ header {
     margin: 0 auto;
 }
 
+@media (min-width: 1280px) {
+    .container {
+        min-width: 1200px;
+        padding: 0;
+    }
+}
+
 .section-title {
     color: var(--black);
     font-family: Roboto;
@@ -89,11 +97,31 @@ header {
 header {
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.12);
 }
+@media (min-width: 1280px) {
+    header {
+        background-color: var(--dark_violet);
+    }
+}
 .header {
     display: flex;
     align-items: center;
+
     padding-top: 12px;
     padding-bottom: 12px;
+}
+@media (min-width: 1280px) {
+    .header {
+        display: block;
+        padding: 32px 0 16px 0;
+    }
+    .row1 {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    .row2 {
+        display: flex;
+    }
 }
 
 .logo {
@@ -110,6 +138,139 @@ header {
 }
 .logo-img {
     margin-right: 8px;
+}
+@media (min-width: 1280px) {
+    .logo {
+        font-size: 25px;
+        margin-right: 28px;
+    }
+    .logo-img {
+        width: 45px;
+        height: 45px;
+        font-weight: 700;
+    }
+}
+@media (min-width: 1280px) {
+    .header-mobile-icons {
+        display: none;
+    }
+    .header-search {
+        display: flex;
+        min-width: 546px;
+    }
+    .header-input-search {
+        border: none;
+        outline: none;
+        padding: 11px 16px;
+        color: #000;
+        font-size: 14px;
+        border-radius: 5px 0px 0px 5px;
+        width: 506px;
+        height: 40px;
+    }
+    .btn-header-search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 0px 5px 5px 0px;
+        background-color: var(--light_grey_bg);
+        /* vertical-align: top; */
+    }
+    .header-buttons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        margin-left: auto;
+    }
+    .header-city {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    #city {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+
+        background-color: var(--dark_violet);
+        background-image: url(../img/select-arrow.svg); /* Путь к вашей иконке */
+        background-repeat: no-repeat;
+        background-position: right 0px center;
+
+        width: 80px;
+    }
+    .btn-header-support {
+        border: none;
+        background: none;
+
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .btn-header-lang {
+        border: none;
+        background: none;
+
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 300;
+        line-height: normal;
+    }
+    .lang-active {
+        font-weight: 700;
+    }
+
+    /* ======== Main Menu ============ */
+    .main-menu {
+        color: var(--white);
+    }
+    .main-menu-list {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .main-menu-item {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 4px 8px;
+    }
+    .main-menu-list li:first-child,
+    .main-menu-list li:nth-child(2) {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 16px;
+    }
+    .main-menu-list li:nth-child(2) {
+        padding: 4px 8px;
+    }
+    .main-menu-item:hover {
+        border-radius: 8px;
+        background-color: var(--violet);
+        cursor: pointer;
+    }
+    .header-desktop-icons {
+        display: flex;
+        justify-content: space-between;
+        width: 154px;
+        margin-left: auto;
+    }
+    .header-desk-icon:hover {
+        cursor: pointer;
+    }
 }
 
 .header-icons {
