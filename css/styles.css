@@ -5,10 +5,12 @@
     --dark_violet: #390176;
     --light_grey: #9e9fa1;
     --light_grey_bg: #e8e8ea;
+    --light_text: #c4bfcd;
+    --Red: #eb5757;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
     font-style: normal;
 }
 
@@ -92,6 +94,9 @@ header {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+.hide {
+    display: none;
+}
 
 /* Header */
 header {
@@ -99,6 +104,7 @@ header {
 }
 @media (min-width: 1280px) {
     header {
+        margin-bottom: 0px;
         background-color: var(--dark_violet);
     }
 }
@@ -328,7 +334,11 @@ header {
     font-weight: 500;
     line-height: 1.38; /* 137.5% */
 }
-
+@media (min-width: 1280px) {
+    .section-sign-in {
+        display: none;
+    }
+}
 /* Search */
 .search-input {
     width: 100%;
@@ -337,12 +347,16 @@ header {
     border-radius: 6px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+@media (min-width: 1280px) {
+    .section-search {
+        display: none;
+    }
+}
 /* Hero */
 .hero {
     display: flex;
     align-items: center;
-    height: 100px;
+    /* min-height: 100px; */
     border-radius: 6px;
     background: rgba(0, 0, 0, 0.05);
 }
@@ -355,7 +369,106 @@ header {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.38; /* 137.5% */
+    line-height: 1.38;
+}
+@media (min-width: 1280px) {
+    .hero-title {
+        display: none;
+    }
+    .hero {
+        align-items: stretch;
+        background: none;
+    }
+    .hero-menu {
+        width: 190px;
+        background-color: var(--dark_violet);
+    }
+    .hero-menu-list {
+    }
+    .hero-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        height: 96px;
+        padding-left: 24px;
+
+        color: var(--white);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: normal;
+        border-bottom: 1px solid var(--light_violet, #c793e7);
+        cursor: pointer;
+    }
+    .hero-menu-item:hover {
+        background-color: var(--violet);
+    }
+    .hero-main {
+        position: relative;
+        width: 100%;
+        height: 576px;
+        background-image: url('../img/hero/full-shot-woman-working-inside.png');
+        background-size: cover; /* Например, чтобы изображение покрывало весь элемент */
+        background-position: center; /* Выравнивание изображения по центру */
+        background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+    }
+    .hero-main-list {
+    }
+    .hero-main-item {
+        position: absolute;
+    }
+    .hero-main-item:nth-child(1) {
+        top: 90px;
+        left: 150px;
+    }
+    .hero-main-item:nth-child(2) {
+        top: 45px;
+        left: 680px;
+    }
+    .hero-main-item:nth-child(3) {
+        top: 300px;
+        left: 690px;
+    }
+    .hero-main-item:nth-child(4) {
+        top: 490px;
+        left: 540px;
+    }
+    .hero-main-item:nth-child(5) {
+        top: 490px;
+        left: 50px;
+    }
+    .hero-main-item:nth-child(6) {
+        top: 300px;
+        left: 20px;
+    }
+    .hero-main-item-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-right: 24px;
+
+        color: var(--dark_violet);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+
+        border: none;
+        border-radius: 32px;
+        background: rgba(199, 147, 231, 0.7);
+    }
+    .hero-main-item-btn:hover {
+        background-color: rgba(255, 199, 108, 0.8);
+    }
+    .hero-main-logo-back {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        /* padding: 8px 5.715px 8px 6px; */
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 100px;
+        background-color: var(--white);
+    }
 }
 
 /* Catalog */
@@ -501,4 +614,286 @@ header {
 }
 .recommended {
     margin-bottom: 12px;
+}
+
+/* LOGIN, REGISTRATION, WELCOME LOGIN */
+
+button {
+    cursor: pointer;
+}
+.welcome__main h3,
+.login__title {
+    color: var(--dark_violet);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    margin-bottom: 12px;
+}
+.welcome__main span {
+    color: var(--light_text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 12px;
+}
+
+.user_login {
+    background-color: #6300a0;
+    border: none;
+}
+
+.welcome,
+.login {
+    width: 730px;
+    height: 574px;
+    border: 1px solid #6300a0;
+    border-radius: 16px;
+    background: var(--white);
+    margin: 5% auto;
+    position: absolute;
+    z-index: 1;
+    left: 25%;
+}
+.close {
+    border: none;
+    background-color: transparent;
+    height: 35px;
+    padding: 0;
+    font-size: 2.3rem;
+    position: relative;
+    bottom: 117%;
+    left: 94%;
+    z-index: 5;
+}
+.close__login {
+    bottom: -2%;
+    left: 43%;
+}
+.animals_welcome {
+    width: 342px;
+    height: 342px;
+}
+.login__animals-hello {
+    width: 318px;
+    height: 318px;
+    position: relative;
+    top: 100px;
+    left: 7%;
+    z-index: 3;
+}
+.welcome__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+    position: relative;
+    z-index: 3;
+}
+.login__main {
+    z-index: 3;
+}
+.login {
+    display: flex;
+    gap: 15px;
+}
+.repeat_password {
+    color: var(--dark_violet);
+    text-align: left;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: block;
+    margin-bottom: 12px;
+}
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    transition: all 2s ease-in-out;
+    animation-play-state: running;
+}
+.animation_circle {
+    position: relative;
+    height: 570px;
+    margin: 0 auto;
+    z-index: 2;
+}
+.big {
+    width: 730px;
+    bottom: 720px;
+}
+.small {
+    width: 370px;
+    bottom: 320px;
+}
+.login__form-wrapper {
+    height: 100%;
+    margin: 60px 0 60px;
+    max-width: 350px;
+    text-align: center;
+}
+.login__forgot_link {
+    color: var(--violet);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.24px;
+    opacity: 0.45;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    width: 170px;
+    margin-top: 24px;
+}
+.login__or {
+    display: flex;
+    justify-content: space-between;
+    color: var(--light_text);
+    align-items: center;
+    margin: 24px 0;
+}
+#email,
+#password,
+#passwordFirst,
+#passwordSecond {
+    border-radius: 8px;
+    border: 1px solid var(--light_grey_bg);
+    padding: 8px 12px;
+    width: 276px;
+    height: 24px;
+}
+.login__password-icons {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    bottom: 35px;
+    left: 130px;
+}
+.login__submit_button {
+    border-radius: 8px;
+    background: #f99b2a;
+    width: 302px;
+    height: 40px;
+    border: none;
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.42px;
+}
+.login__svg {
+    width: 30px;
+    left: 267px;
+}
+.login__register-link-button {
+    display: flex;
+    gap: 4px;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 8px;
+    color: #8611cd;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 17px;
+}
+.login__sign_social_button {
+    display: flex;
+    width: 302px;
+    height: 40px;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    gap: 8px;
+    border: 1px solid var(--light_grey_bg);
+    background: #fff;
+}
+.login__register-link {
+    color: var(--light_text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Seller_wrapper_button {
+    width: 145px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 320px;
+    position: relative;
+    left: 85px;
+    z-index: 5;
+    background: url('../images/login/cloudSeller.svg') no-repeat;
+}
+.Seller_button {
+    margin-bottom: 5px;
+    width: 85px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background: #f99b2a;
+    color: var(--white);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 116%;
+}
+.Customer_wrapper_button {
+    width: 145px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 450px;
+    position: relative;
+    left: 480px;
+    z-index: 5;
+    background: url('../images/login/cloudCustomer.svg') no-repeat;
+}
+.login__errors,
+.password__errors {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    z-index: 5;
+    background: url('./images/login/cloudLoginErrors.svg') no-repeat;
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    left: 180px;
+    top: 95px;
+    color: var(--Red);
+    text-align: center;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px;
+}
+.password__errors {
+    padding: 40px 20px 0 15px;
+    width: 170px;
+}
+.Customer_button {
+    margin-bottom: 5px;
+    width: 85px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background: #e8c0ff;
+    color: #8611cd;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 116%;
 }

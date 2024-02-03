@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <title>Registration page</title>
+    </head>
+    <body>
+        <div class="login" ref="{modalRegRef}">
+            <div class="login__main">
+                <img
+                    src="./img/login/animals_login.svg"
+                    alt="Hello"
+                    loading="lazy"
+                    class="login__animals-hello"
+                />
+                <!-- <AnimationCircle maxWidth={360} maxHeight={570} class="small" /> -->
+            </div>
+            <button class="close close__login" type="button">&#215;</button>
+            <div class="login__form-wrapper">
+                <form action="" class="js-form">
+                    <h3 class="login__title">Create an account</h3>
+                    <div>
+                        <div style="max-height: 40px; margin-bottom: 12px">
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                placeholder="Email"
+                            />
+                            <div class="login__password-icons login__svg">
+                                <!-- <LoginInputIcon /> -->
+                            </div>
+                        </div>
+                        <div style="max-height: 40px; margin-bottom: 12px">
+                            <input
+                                type="text"
+                                id="passwordFirst"
+                                name="passwordFirst"
+                                placeholder="Password"
+                            />
+                            <!-- <div>
+                  {showPasswordFirst ? (
+                    <button
+                      type="button"
+                      class="login__password-icons"
+                      onClick={() => setShowPasswordFirst(false)}>
+                      <PasswordInputIcon1 />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      class="login__password-icons"
+                      onClick={() => setShowPasswordFirst(true)}>
+                      <PasswordInputIcon2 />
+                    </button>
+                  )}
+                </div> -->
+                        </div>
+                        <span class="repeat_password"
+                            >Repeat your password</span
+                        >
+                        <div style="max-height: 40px; margin-bottom: 12px">
+                            <input
+                                type="text"
+                                id="passwordSecond"
+                                name="passwordSecond"
+                                placeholder="Password"
+                            />
+                            <!-- <div>
+                  {showPasswordSecond ? (
+                    <button
+                      type="button"
+                      class="login__password-icons"
+                      onClick={() => setShowPasswordSecond(false)}>
+                      <PasswordInputIcon1 />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      class="login__password-icons"
+                      onClick={() => setShowPasswordSecond(true)}>
+                      <PasswordInputIcon2 />
+                    </button>
+                  )}
+                </div> -->
+                        </div>
+                    </div>
+                    <!-- <div>
+              {formik.touched.email && formik.errors.email && (
+                <p class="login__errors">
+                  <LoginErrorIcon />
+                  {': '}
+                  {formik.errors.email}
+                </p>
+              )}
+              {((formik.touched.passwordFirst && formik.errors.passwordFirst) ||
+                (formik.touched.passwordSecond &&
+                  formik.errors.passwordSecond)) && (
+                <p class="password__errors">
+                  <PasswordErrorIcon />
+                  {': '}
+                  {formik.errors.passwordFirst || formik.errors.passwordSecond}
+                </p>
+              )}
+            </div> -->
+                    <button type="submit" class="login__submit_button">
+                        Register
+                    </button>
+                </form>
+                <div class="login__or">
+                    <div style="text-decoration: line-through">
+                        ---------------------------
+                    </div>
+                    <span style="font-size: 12px">or</span>
+                    <div style="text-decoration: line-through">
+                        ---------------------------
+                    </div>
+                </div>
+                <button
+                    type="button"
+                    class="login__sign_social_button"
+                    disabled
+                >
+                    <!-- <GoogleIcon /> -->
+                    Log in with Google
+                </button>
+                <button
+                    type="button"
+                    class="login__sign_social_button"
+                    disabled
+                >
+                    <!-- <FacebookIcon /> -->
+                    Log in with Facebook
+                </button>
+                <!-- <div class="login__register-link">
+            Back to{' '}
+            <button
+              type="button"
+              onClick={() => openLogin()}
+              class="login__register-link-button">
+              Login <Foot />
+            </button>
+          </div> -->
+            </div>
+        </div>
+    </body>
+</html>
